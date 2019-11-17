@@ -26,4 +26,10 @@ public class TbContentCategoryServiceImpl implements TbContentCategoryService {
         List<TbContentCategory> list = tbContentCategoryMapper.selectByExample(example);
         return new PageInfo<>(list);
     }
+
+    @Override
+    public List<TbContentCategory> getTB() {
+        TbContentCategoryExample example = new TbContentCategoryExample();
+        return tbContentCategoryMapper.selectByExample(example);
+    }
 }

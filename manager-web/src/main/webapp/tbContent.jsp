@@ -15,7 +15,10 @@
     <script src="js/jquery-1.8.3.js"></script>
     <!--jquery.easyui.min.js包含了easyUI中的所有插件-->
     <script src="js/jquery.easyui.min.js"></script>
-    <script language="JavaScript" src="js/contentCategory.js"></script>
+    <script>
+
+    </script>
+    <script language="JavaScript" src="js/tbContent.js"></script>
 </head>
 <body>
 <table id="dg"></table>
@@ -33,8 +36,37 @@
 <!--制作添加区域的对话框-->
 <div id="AddDialog" class="easyui-dialog" buttons="#AddDialogButtons"
            style="width: 280px; height: 250px; padding: 10px 20px;" closed="true"  data-options="modal:true">
-    <form action="" id="addForm" name="addForm" method="post">
-        区域名称:<input type="text" id="name" name="name"><br/>
+    <form action="" id="addForm" name="addForm" method="post" >
+        <p>添加广告:</p>
+        <form action="addContent" method="post" enctype="multipart/form-data" name="form1" id="form1">
+            <p>类别
+
+                <select name="categoryId" id="select" style="width: 150px;"></select>
+            </p>
+            <p>标题:
+                <input type="text" name="title" id="textfield" />
+            </p>
+            <p>url:
+                <input type="text" name="url" id="textfield2" />
+            </p>
+            <p>图片:
+                <input type="file" name="pfile" id="fileField" />
+            </p>
+            <p>状态:
+                <input type="radio" name="status" id="radio" value="1" />
+                启用
+                <input type="radio" name="status" id="radio2" value="0" />
+                停用 </p>
+            <p>顺序:
+                <input type="text" name="sortOrder" id="textfield3" />
+            </p>
+            <p>
+                <input type="button" name="button" id="button" value="添加" />
+            </p>
+            <p>&nbsp;</p>
+        </form>
+
+        <br/>
     </form>
 </div>
 <!--对话框的按钮-->

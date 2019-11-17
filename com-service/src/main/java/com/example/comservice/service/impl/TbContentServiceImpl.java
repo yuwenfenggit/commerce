@@ -27,4 +27,9 @@ public class TbContentServiceImpl implements TbContentService {
         List<TbContent> tbContents = tbContentMapper.selectByExample(tbContentExample);
         return new PageInfo<>(tbContents);
     }
+
+    @Override
+    public int addTbContent(TbContent tbContent) {
+        return tbContentMapper.insertSelective(tbContent);
+    }
 }

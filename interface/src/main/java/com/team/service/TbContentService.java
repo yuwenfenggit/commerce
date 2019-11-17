@@ -6,4 +6,6 @@ import com.team.util.PageUtil;
 
 public interface TbContentService {
     PageInfo<TbContent> getTbContent(PageUtil pageUtil);
+
+    int addTbContent(TbContent tbContent);
 }

@@ -36,9 +36,8 @@
 <!--制作添加区域的对话框-->
 <div id="AddDialog" class="easyui-dialog" buttons="#AddDialogButtons"
            style="width: 280px; height: 250px; padding: 10px 20px;" closed="true"  data-options="modal:true">
-    <form action="" id="addForm" name="addForm" method="post" >
+    <form action="" id="addForm" name="addForm" enctype="multipart/form-data" method="post" >
         <p>添加广告:</p>
-        <form action="addContent" method="post" enctype="multipart/form-data" name="form1" id="form1">
             <p>类别
 
                 <select name="categoryId" id="select" style="width: 150px;"></select>
@@ -50,7 +49,7 @@
                 <input type="text" name="url" id="textfield2" />
             </p>
             <p>图片:
-                <input type="file" name="pfile" id="fileField" />
+                <input type="file" name="file" id="fileField" />
             </p>
             <p>状态:
                 <input type="radio" name="status" id="radio" value="1" />
@@ -60,12 +59,7 @@
             <p>顺序:
                 <input type="text" name="sortOrder" id="textfield3" />
             </p>
-            <p>
-                <input type="button" name="button" id="button" value="添加" />
-            </p>
             <p>&nbsp;</p>
-        </form>
-
         <br/>
     </form>
 </div>

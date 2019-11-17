@@ -17,7 +17,7 @@ $(function(){  //加载事件
                     //同步
                     return "<a href='javascript:delDistrict("+row.id+");'>删除</a> | <a href=''>修改</a>";
                 }
-            },
+            }
         ]]
     });
 
@@ -59,15 +59,16 @@ function SaveDialog(){
 
     //2.使用easyui的表单提示插件
     $('#addForm').form('submit',{   //提交按钮
-        url:"addDistrit",
+        url:"addContent",
         success:function(data){ //获得是json字符串
             //将json字符串转化为json对象
             data=$.parseJSON(data);
-            if(data.result==1){
+            if(data.result == 1){
                 $("#dg").datagrid('reload'); //刷新
                 $("#AddDialog").dialog("close");//关闭窗口
+                $.messager.alert('>>提示','添加成功！','info');
             }else{
-                alert("添加失败!!!");
+                $.messager.alert('>>提示','添加失败！','error');
             }
         }
     });

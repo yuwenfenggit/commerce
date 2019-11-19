@@ -48,6 +48,5 @@ public class TbContentController {
             e.printStackTrace();
         }
         return "{\"result\":-1}";
-
     }
 }
